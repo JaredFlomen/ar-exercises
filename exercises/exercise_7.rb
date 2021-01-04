@@ -12,7 +12,9 @@ puts "----------"
 # Your code goes here ...
 puts 'input a store name'
 @storeName = gets.chomp
+puts 'Sell men apparel: true or false?'
+@mens_apparel = gets.chomp
 
-newStore = Store.create(name: @storeName)
+newStore = Store.create(name: @storeName, mens_apparel: @mens_apparel)
 
 puts newStore.errors.full_messages
